@@ -20,8 +20,8 @@ public class ScheduleTask {
     @Autowired
     private SimpMessageSendingOperations messagingTemplate;
 
-    @Autowired
-    EmpRepo  repo;
+//    @Autowired
+//    EmpRepo  repo;
 
     @Scheduled(fixedRate = 1000)
     public void repoCurrentTime(){
