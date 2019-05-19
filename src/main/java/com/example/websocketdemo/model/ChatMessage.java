@@ -1,5 +1,7 @@
 package com.example.websocketdemo.model;
 
+import java.util.List;
+
 /**
  * Created by rajeevkumarsingh on 24/07/17.
  */
@@ -7,7 +9,7 @@ public class ChatMessage {
     private MessageType type;
     private String content;
     private String sender;
-
+    private List<EMP> emp;
     public enum MessageType {
         CHAT,
         JOIN,
@@ -36,5 +38,13 @@ public class ChatMessage {
 
     public void setSender(String sender) {
         this.sender = sender;
+    }
+
+    public List<EMP> getEmp() {
+        return emp;
+    }
+
+    public void setEmp(List<EMP> emp) {
+        this.emp = emp;
     }
 }
