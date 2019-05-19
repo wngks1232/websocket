@@ -1,8 +1,7 @@
 package com.example.websocketdemo.config;
 
-import com.example.websocketdemo.EmpRepo;
-import com.example.websocketdemo.controller.ChatController;
-import com.example.websocketdemo.model.ChatMessage;
+import com.example.websocketdemo.dataRepo.EmpRepo;
+import com.example.websocketdemo.dataModel.ChatMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +23,12 @@ public class ScheduleTask {
     @Autowired
     EmpRepo  repo;
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 1000)
     public void repoCurrentTime(){
         ChatMessage chatMessage = new ChatMessage();
         chatMessage.setType(ChatMessage.MessageType.LEAVE);
         chatMessage.setSender("DBConnection!");
-        chatMessage.setEmp(repo.getEMPDEPTLIST());
+//        chatMessage.setEmp(repo.getEMPDEPTLIST());
 
         log.info("The Time Checker " ,dateFormat.format(new Date()));
 

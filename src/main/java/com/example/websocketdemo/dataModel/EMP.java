@@ -1,12 +1,10 @@
-package com.example.websocketdemo.model;
+package com.example.websocketdemo.dataModel;
 
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import java.sql.Timestamp;
 

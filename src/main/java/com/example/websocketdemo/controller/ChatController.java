@@ -1,6 +1,6 @@
 package com.example.websocketdemo.controller;
 
-import com.example.websocketdemo.model.ChatMessage;
+import com.example.websocketdemo.dataModel.ChatMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -27,9 +27,9 @@ public class ChatController {
     @SendTo("/topic/public")
     public ChatMessage addUser(@Payload ChatMessage chatMessage,
                                SimpMessageHeaderAccessor headerAccessor) {
-        logger.info("ChatController Class addUser_Func--- Loding");
-        // Add username in web socket session
+
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
+
         return chatMessage;
     }
 

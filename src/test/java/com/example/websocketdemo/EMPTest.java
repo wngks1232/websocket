@@ -1,6 +1,6 @@
 package com.example.websocketdemo;
 
-import com.example.websocketdemo.model.EMP;
+import com.example.websocketdemo.userRepo.MemberRepo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -9,20 +9,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
-import java.util.List;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class EMPTest {
     private static final Logger logger = LoggerFactory.getLogger(EMPTest.class);
+//    @Autowired
+//    EmpRepo repo;
     @Autowired
-    EmpRepo repo;
+    MemberRepo mrepp;
+
     @Test
     public void selectTest(){
-        List<EMP> list = repo.getEMPDEPTLIST();
-        list.forEach(arr->{
-            logger.info(arr.toString());
-        });
+
+        Member member = new Member();
+        member.setMemberemail("test0@gmail.com");
+        member.setMemberpw("USERPW000");
+
+        int i = mrepp.getCount(member.getMemberemail(),member.getMemberpw());
+
+        logger.info("test : "+i);
     }
 }

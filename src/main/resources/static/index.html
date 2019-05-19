@@ -1,53 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-      <title>Spring Boot WebSocket Chat Application | CalliCoder</title>
-      <link rel="stylesheet" href="/css/main.css" />
-  </head>
-  <body>
-    <noscript>
-      <h2>Sorry! Your browser doesn't support Javascript</h2>
-    </noscript>
-
-    <div id="username-page">
-        <div class="username-page-container">
-            <h1 class="title">Type your username</h1>
-            <form id="usernameForm" name="usernameForm">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="accent username-submit">Start Chatting</button>
-                </div>
-            </form>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="/css/login.css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+<div class="container" >
+    <div class="col-lg-4 col-md-3 col-sm-2"></div>
+    <div class="col-lg-4 col-md-6 col-sm-8">
+        <div class="logo">
+            <!--            <img src="http://www.seacretdirect.kr/wp-content/themes/brandpage/common/images/slogo.jpg"  alt="Logo"  >-->
         </div>
-    </div>
-
-    <div id="chat-page" class="hidden">
-        <div class="chat-container">
-            <div class="chat-header">
-                <h2>Spring WebSocket Chat Demo</h2>
+        <form class="row loginbox" action="/count" method="post">
+            <div class="col-lg-12">
+                <span class="singtext" >로그인 </span>
             </div>
-            <div class="connecting">
-                Connecting...
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <input class="form-control" type="text" placeholder="이메일" name="memberemail">
             </div>
-            <ul id="messageArea">
-
-            </ul>
-            <form id="messageForm" name="messageForm" nameForm="messageForm">
-                <div class="form-group">
-                    <div class="input-group clearfix">
-                        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
-                        <button type="submit" class="primary">Send</button>
-                    </div>
-                </div>
-            </form>
+            <div class="col-lg-12  col-md-12 col-sm-12">
+                <input class="form-control" type="password" placeholder="비밀번호" name="memberpw">
+            </div>
+            <div class="col-lg-12  col-md-12 col-sm-12">
+                <input class="btn  submitButton" type="submit" value="로그인"/>
+            </div>
+        </form>
+        <div class="row forGotPassword">
+            <a href="#" >Forgot Username / Password? </a>
         </div>
+        <br>
+        <br>
+        <footer  class="footer">
+        </footer> <!--footer Section ends-->
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-    <script src="/js/main.js"></script>
-  </body>
+    <div class="col-lg-4 col-md-3 col-sm-2"></div>
+</div>
+</body>
 </html>

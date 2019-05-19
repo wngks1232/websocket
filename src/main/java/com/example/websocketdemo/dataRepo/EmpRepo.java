@@ -1,10 +1,9 @@
-package com.example.websocketdemo;
+package com.example.websocketdemo.dataRepo;
 
-import com.example.websocketdemo.model.EMP;
+import com.example.websocketdemo.dataModel.EMP;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-import javax.validation.constraints.Null;
 import java.util.List;
 
 public interface EmpRepo extends CrudRepository<EMP,Integer> {
