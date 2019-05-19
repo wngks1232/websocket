@@ -1,5 +1,6 @@
 package com.example.websocketdemo;
 
+import com.example.websocketdemo.userModel.Member;
 import com.example.websocketdemo.userRepo.MemberRepo;
 import org.junit.Test;
 import org.junit.runner.RunWith;

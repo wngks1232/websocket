@@ -1,5 +1,6 @@
 package com.example.websocketdemo.controller;
 
+import com.example.websocketdemo.userModel.Member;
 import com.example.websocketdemo.userRepo.MemberRepo;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
